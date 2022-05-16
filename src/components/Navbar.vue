@@ -24,11 +24,13 @@
     <div class="nav_bottom">
       <ul>
              <li>
-               <router-link to='/bosh_sahifa' class="router">Bosh sahifa</router-link>
+               <router-link to='/' class="router">Bosh sahifa</router-link>
                </li>
              <li>Yangiliklar</li>
              <li>Kutubxona haqida malumot</li>
-             <li>Kitoblar</li>
+             <li>
+               <router-link to='/books' class="router">Kitoblar</router-link>
+               </li>
              <li>Kutubxonalar</li>
       </ul>
     </div>
