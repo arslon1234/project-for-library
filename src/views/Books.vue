@@ -1,6 +1,6 @@
 <template>
   <div class="books">
-    <h2>Kitoblar</h2>
+    <h2>{{ t("Books", {}, { locale: b }) }}</h2>
     <div class="items">
       <div class="item" v-for="item in books" :key="item.id">
         <router-link :to="`/singlebook/:${item.id}`" class="_btn">Batafsil</router-link>
@@ -13,7 +13,15 @@
 <script setup>
 import axios from "axios";
 import { ref } from "vue";
+import Navbar from '@/components/Navbar'
 const books = ref([]);
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+const b = ref();
+const a =()=>{
+  b.value = localStorage.getItem("lang"), "lang"
+}
+a()
 const getBooks = () => {
   axios
     .get("https://www.googleapis.com/books/v1/volumes?q=programming")

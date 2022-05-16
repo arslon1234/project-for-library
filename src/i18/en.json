@@ -3,5 +3,8 @@
        "news": "News",
        "about_library": "About Libraries",
        "books": "Books",
-       "libraries": "Libraries"
+       "libraries": "Libraries",
+       "library": "Library",
+       "tuit": "Tashkent University of Information Technologies",
+       "Books": "Books"
 }

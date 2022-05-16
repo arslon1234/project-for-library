@@ -17,18 +17,18 @@
         </div>
         <div>
           <h4>Product Details:</h4>
-          <p>Country: {{single.accessInfo.country}}</p>
-          <p>Publisher: {{single.volumeInfo.publisher}}</p>
-          <p>Publish Data: {{single.volumeInfo.publishedDate}}</p>
-          <p>Language: {{single.volumeInfo.language}}</p>
+          <p>Country: {{ single.accessInfo.country }}</p>
+          <p>Publisher: {{ single.volumeInfo.publisher }}</p>
+          <p>Publish Data: {{ single.volumeInfo.publishedDate }}</p>
+          <p>Language: {{ single.volumeInfo.language }}</p>
         </div>
         <div>
-               <h4>Description:</h4>
-               <!-- <span> domPropsInnerHTML={{single.volumeInfo.decription}}</span> -->
-                 <!-- <span
+          <h4>Description:</h4>
+          <!-- <span> domPropsInnerHTML={{single.volumeInfo.decription}}</span> -->
+          <!-- <span
                   domPropsInnerHTML= __html: {{single.volumeInfo.description }}
                 ></span> -->
-               <p>{{single.volumeInfo.description}}</p>
+          <p v-html="single.volumeInfo.description"></p>
         </div>
       </div>
     </div>
@@ -40,8 +40,10 @@ import { ref } from "vue";
 import axios from "axios";
 const urlId = window.location.href.split(":");
 const url = urlId[2].split("8080/#/singlebook/");
-console.log(url, "url")
+console.log(url, "url");
 const single = ref({});
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
 const getSingleBook = () => {
   axios
     .get(`https://www.googleapis.com/books/v1/volumes/${urlId[3]}`)
