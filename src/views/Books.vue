@@ -1,9 +1,11 @@
 <template>
   <div class="books">
-    <h2>{{ t("Books", {}, { locale: b }) }}</h2>
+    <h2>{{ $t("Books") }}</h2>
     <div class="items">
       <div class="item" v-for="item in books" :key="item.id">
-        <router-link :to="`/singlebook/:${item.id}`" class="_btn">Batafsil</router-link>
+        <router-link :to="`/singlebook/:${item.id}`" class="_btn"
+          >Batafsil</router-link
+        >
         <img :src="item.volumeInfo.imageLinks.thumbnail" alt="#" />
       </div>
     </div>
@@ -13,15 +15,13 @@
 <script setup>
 import axios from "axios";
 import { ref } from "vue";
-import Navbar from '@/components/Navbar'
+import Navbar from "@/components/Navbar";
 const books = ref([]);
-import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
 const b = ref();
-const a =()=>{
-  b.value = localStorage.getItem("lang"), "lang"
-}
-a()
+const a = () => {
+  (b.value = localStorage.getItem("lang")), "lang";
+};
+a();
 const getBooks = () => {
   axios
     .get("https://www.googleapis.com/books/v1/volumes?q=programming")
@@ -87,7 +87,7 @@ getBooks();
   font-family: "Roboto", sans-serif;
   text-decoration: none;
 }
-.books .items .item:hover ._btn{
+.books .items .item:hover ._btn {
   position: absolute;
   top: 60px;
   left: 32%;
