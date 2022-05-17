@@ -23,7 +23,7 @@ const routes = [
       {
         path: "/about_library",
         name: 'about_library',
-        component: AboutLibraries
+        component: AboutLibraries,
       },
     ]
   },

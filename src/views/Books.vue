@@ -8,14 +8,15 @@
         >
         <img :src="item.volumeInfo.imageLinks.thumbnail" alt="#" />
       </div>
+        <Footer/>
     </div>
   </div>
 </template>
-
 <script setup>
 import axios from "axios";
 import { ref } from "vue";
 import Navbar from "@/components/Navbar";
+import Footer from '@/components/Footer'
 const books = ref([]);
 const b = ref();
 
@@ -41,6 +42,7 @@ getBooks();
   height: 100vh;
   margin-top: 20px;
 }
+
 .books h2 {
   text-align: center;
 }
@@ -52,6 +54,9 @@ getBooks();
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 25px;
+}
+.books .footer {
+  margin-top: 300px;
 }
 .books .items .item {
   position: relative;
