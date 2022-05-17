@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import BoshSahifa from '@/views/BoshSahifa'
 import Books from '@/views/Books'
 import SingleBook from '@/views/SingleBook'
+import AboutLibraries from '@/views/AboutLibraries'
 const routes = [
   {
     path: '/',
@@ -18,7 +19,12 @@ const routes = [
         path: "/books",
         name: 'books',
         component: Books
-      }
+      },
+      {
+        path: "/about_library",
+        name: 'about_library',
+        component: AboutLibraries
+      },
     ]
   },
   {

@@ -3,5 +3,19 @@
        "news": "News",
        "about_library": "About Libraries",
        "books": "Books",
-       "libraries": "Libraries"
+       "libraries": "Libraries",
+       "library": "Library",
+       "tuit": "Tashkent University of Information Technologies",
+       "Books": "Books",
+       "read_more": "Read more",
+       "motivation": "Books are a uniquely portable magic",
+       "exit": "Exit",
+       "authors": "Authors",
+       "product_details":"Product Details",
+       "country":"Country",
+       "publisher":"Publisher",
+       "publish_date":"Publish Date",
+       "language": "Language",
+       "description":"Description",
+       "Library": "A library is a collection of materials, books or media that are easily accessible for use and not just for display purposes. It is responsible for housing updated information in order to meet the user's needs on a daily basis. A library provides physical (hard copies documents) or digital access (soft copies) materials, and may be a physical location or a virtual space, or both. A library's collection can include printed materials and other physical resources in many formats such as DVD, CD and Cassette as well as access to information, music or other content held on bibliographic databases."
 }
