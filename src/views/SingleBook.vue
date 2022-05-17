@@ -1,5 +1,12 @@
 <template>
+<div class="_head">
+    <div class="title">
+      <span>{{ $t("motivation") }}</span>
+    </div>
+   <router-link to='/' class="exist">{{$t("exit")}}</router-link>
+    </div>
   <div class="container mt-4">
+    
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="img">
@@ -10,20 +17,20 @@
         <h2>{{ single.volumeInfo.title }}</h2>
         <br />
         <div>
-          <h4>Authors:</h4>
+          <h4>{{$t("authors")}}:</h4>
           <ul v-for="author in single.volumeInfo.authors" :key="author.id">
             <li>{{ author }}</li>
           </ul>
         </div>
         <div>
-          <h4>Product Details:</h4>
-          <p>Country: {{ single.accessInfo.country }}</p>
-          <p>Publisher: {{ single.volumeInfo.publisher }}</p>
-          <p>Publish Data: {{ single.volumeInfo.publishedDate }}</p>
-          <p>Language: {{ single.volumeInfo.language }}</p>
+          <h4>{{$t("product_details")}}:</h4>
+          <p>{{$t("country")}}: {{ single.accessInfo.country }}</p>
+          <p>{{$t("publisher")}}: {{ single.volumeInfo.publisher }}</p>
+          <p>{{$t("publish_date")}}: {{ single.volumeInfo.publishedDate }}</p>
+          <p>{{$t("language")}}: {{ single.volumeInfo.language }}</p>
         </div>
         <div>
-          <h4>Description:</h4>
+          <h4>{{$t("description")}}:</h4>
           <!-- <span> domPropsInnerHTML={{single.volumeInfo.decription}}</span> -->
           <!-- <span
                   domPropsInnerHTML= __html: {{single.volumeInfo.description }}
@@ -69,6 +76,29 @@ getSingleBook();
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+}
+._head{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:#fddcb0;
+}
+._head .title span{
+  font-family: "Roboto", sans-serif;
+  color: #706e6e;
+  letter-spacing: 0.5px;
+}
+._head .exist{
+  padding: 2px 12px;
+  border: 1px solid;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #706e6e;
   border-radius: 10px;
 }
 </style>

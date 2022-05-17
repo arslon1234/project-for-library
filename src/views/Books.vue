@@ -4,7 +4,7 @@
     <div class="items">
       <div class="item" v-for="item in books" :key="item.id">
         <router-link :to="`/singlebook/:${item.id}`" class="_btn"
-          >Batafsil</router-link
+          >{{ $t("read_more") }}</router-link
         >
         <img :src="item.volumeInfo.imageLinks.thumbnail" alt="#" />
       </div>
@@ -18,10 +18,7 @@ import { ref } from "vue";
 import Navbar from "@/components/Navbar";
 const books = ref([]);
 const b = ref();
-const a = () => {
-  (b.value = localStorage.getItem("lang")), "lang";
-};
-a();
+
 const getBooks = () => {
   axios
     .get("https://www.googleapis.com/books/v1/volumes?q=programming")
@@ -74,10 +71,14 @@ getBooks();
 }
 .books .items .item ._btn {
   position: absolute;
-  top: -36px;
-  left: 32%;
+  top: -40px;
+  left: 29%;
   z-index: 333;
-  padding: 5px 20px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #1ca7c0;
   border-radius: 10px;
   background-color: #fff;
@@ -90,6 +91,6 @@ getBooks();
 .books .items .item:hover ._btn {
   position: absolute;
   top: 60px;
-  left: 32%;
+  left: 29%;
 }
 </style>

@@ -24,36 +24,106 @@
     <div class="nav_bottom">
       <ul>
         <li>
-          <router-link to="/" class="router">{{ $t("home") }}</router-link>
+          <router-link
+            to="/"
+            :class="click1 ? 'router1' : 'router'"
+            @click="Click1"
+            >{{ $t("home") }}</router-link
+          >
         </li>
-        <li>{{ $t("news") }}</li>
-        <li>{{ $t("about_library") }}</li>
         <li>
-          <router-link to="/books" class="router">{{
-            $t("books")
-          }}</router-link>
+          <router-link
+            to="/"
+            :class="click2 ? 'router1' : 'router'"
+            @click="Click2"
+          >
+            {{ $t("news") }}</router-link
+          >
         </li>
-        <li>{{ $t("libraries") }}</li>
+        <li>
+          <router-link
+            to="/about_library"
+            :class="click3 ? 'router1' : 'router'"
+            @click="Click3"
+            >{{ $t("about_library") }}</router-link
+          >
+        </li>
+        <li>
+          <router-link
+            to="/books"
+            :class="click4 ? 'router1' : 'router'"
+            @click="Click4"
+            >{{ $t("books") }}</router-link
+          >
+        </li>
+        <li>
+          <router-link
+            to="/"
+            :class="click5 ? 'router1' : 'router'"
+            @click="Click5"
+            >{{ $t("libraries") }}</router-link
+          >
+        </li>
       </ul>
     </div>
   </div>
 </template>
 
 <script setup>
-import en from "@/assets/en.jpg";
-import ru from "@/assets/ru.jpg";
-import uz from "@/assets/uz.jpg";
 import i18n from "@/plugins/i18n";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
+import {onMounted} from 'vue'
 const { t, locale } = useI18n();
+console.log(i18n.global.locale, "locale");
+const click1 = ref(true);
+const click2 = ref(false);
+const click3 = ref(false);
+const click4 = ref(false);
+const click5 = ref(false);
 const d = ref();
+onMounted(() => {
+   i18n.global.locale = localStorage.getItem("lang")
+})
 const change = (event) => {
   localStorage.setItem("lang", event.target.value);
   i18n.global.locale = event.target.value;
-  // event.target.value = d.value
 };
 d.value = localStorage.getItem("lang");
+const Click1 = () => {
+  click1.value = true;
+  (click2.value = false), (click3.value = false);
+  click4.value = false;
+  click5.value = false;
+};
+const Click2 = () => {
+  (click2.value = true),
+    (click3.value = false),
+    (click4.value = false),
+    (click5.value = false);
+  click1.value = false;
+};
+const Click3 = () => {
+  (click2.value = false),
+    (click3.value = true),
+    (click4.value = false),
+    (click5.value = false);
+  click1.value = false;
+};
+const Click4 = () => {
+  (click2.value = false),
+    (click3.value = false),
+    (click4.value = true),
+    (click5.value = false);
+  click1.value = false;
+};
+const Click5 = () => {
+  (click2.value = false),
+    (click3.value = false),
+    (click4.value = false),
+    (click5.value = true);
+  click1.value = false;
+};
 </script>
 
 <style scoped>
@@ -103,7 +173,6 @@ d.value = localStorage.getItem("lang");
   margin-right: 80px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 .navbars .nav_centre .bottom_right .input {
   width: 280px;
@@ -156,6 +225,12 @@ d.value = localStorage.getItem("lang");
 .navbars .nav_bottom ul li .router {
   text-decoration: none;
   color: #2e2d2d;
+}
+.navbars .nav_bottom ul li .router1 {
+  text-decoration: none;
+  color: #b1040e;
+  font-size: 22px;
+  transition: all 0.1s linear;
 }
 .navbars .nav_bottom ul li .router:hover {
   color: #b1040e;

@@ -4,7 +4,7 @@ import ru from "@/i18/ru.json";
 import uz from "@/i18/uz.json";
 
 const lang = localStorage.getItem("lang");
-
+console.log(lang, "lang22")
 const i18n = createI18n({
   messages: {
     uz,
@@ -12,7 +12,7 @@ const i18n = createI18n({
     ru,
   },
   silentTranslationWarn: true,
-  fallbackLocale: lang | "en",
+  fallbackLocale: lang || 'en',
 });
 
 

@@ -1,10 +1,21 @@
 {
        "home": "Bosh sahifa",
        "news": "Yangiliklar",
-       "about_library": "Kutubxona haqida malumot",
+       "about_library": "Kutubxonalar haqida malumot",
        "books": "Kitoblar",
        "libraries": "Kutubxonalar",
        "library": "Kutubxona",
        "tuit": "Toshkent Axborot Texnologiyalar Universiteti",
-       "Books": "Kitoblar"
+       "Books": "Kitoblar",
+       "read_more": "Batafsil",
+       "motivation":"Kitoblar o'ziga xos ko'chma sehrdir",
+       "exit": "Chiqish",
+       "authors": "Mualliflar",
+       "product_details":"Mahsulot tafsilotlari",
+       "country": "Davlat",
+       "publisher":"Nashriyotchi",
+       "publish_date":"Nashr qilingan sana",
+       "language": "Til",
+       "description":"Izoh",
+       "Library":"Kutubxona — bosma va ayrim qoʻlyozma asarlardan ommaviy foydalanishni taʼminlovchi madaniy-maʼrifiy va ilmiy muassasa; muntazam ravishda bosma asarlar toʻplash, saqlash, targʻib qilish va kitobxonlarga yetkazish, shuningdek, axborot-bibliografiya ishlari bilan shugʻullanadi, ommaning madaniy saviyasini oshirishda faollik koʻrsatadi. Kitobxonlarga xizmat koʻrsatish K.ning asosiy faoliyati boʻlib, qolgan barcha faoliyatlar (kitob fondini butlash va uni tashkil etish, fond mazmunini yoritish, uni kitobxonlarga yetkazish qabilar) asosiy faoliyat uchun xizmat kiladi. Kitobxonlarga xizmat koʻrsatishning asosiy maqsadi ularni axborot va adabiyotga boʻlgan talablarini imkon boricha toʻliq qondirish va adabiyot tanlashlariga yordam berishdan iborat. Har bir K. oʻz turiga koʻra kitobxonlarni tabaqalarga boʻlib, alohida kitobxonlar guruhlariga ajratgan holda xizmat koʻrsatishni tashkil qiladi. Adabiyotlar targʻibotining barcha shakl va usullari kitobxonlar talabini imkon qadar toʻliq va tezkorlik bilan qondirishga qaratiladi."
 }
