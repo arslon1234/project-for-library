@@ -3,11 +3,15 @@
     <div class="nav_top">
       <span>{{ $t("tuit") }}</span>
     </div>
-    <div class="nav_centre">
+    <div
+      class="nav_centre d-flex justify-content-md-around justify-content-xl-between justify-content-sm-center"
+    >
       <div class="bottom_left">
         <p class="tatu">{{ $t("library") }}</p>
       </div>
-      <div class="bottom_right">
+      <div
+        class="bottom_right justify-content-center justify-content-md-end justify-content-xl-end w-100"
+      >
         <div class="input">
           <input type="text" placeholder="Search this site" />
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -33,7 +37,7 @@
         </li>
         <li>
           <router-link
-            to="/"
+            to="/news"
             :class="click2 ? 'router1' : 'router'"
             @click="Click2"
           >
@@ -124,7 +128,7 @@ const click2 = ref(false);
 const click3 = ref(false);
 const click4 = ref(false);
 const click5 = ref(false);
-const library = ref(true)
+const library = ref(false)
 const OpenLibrary =()=>{
   library.value =!library.value
 }
@@ -173,6 +177,23 @@ const Click5 = () => {
 };
 </script>
 <style scoped>
+@media screen and (max-width: 780px) {
+  .nav_bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_bottom ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav_bottom ul li {
+    padding: 10px 0;
+  }
+  .nav_centre {
+    flex-wrap: wrap;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -180,7 +201,7 @@ const Click5 = () => {
 }
 .navbars {
   width: 100%;
-  height: 150px;
+  /* height: 150px; */
   box-shadow: 0px 1px 3px 5px #ccc;
 }
 .navbars .nav_top {

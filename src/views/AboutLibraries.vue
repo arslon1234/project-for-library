@@ -52,21 +52,21 @@ import Footer from '@/components/Footer'
 </script>
 
 <style scoped>
-*{
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.about{
-       width: 100%;
-       height: 100vh;
-       margin-top: 20px;
+.about {
+  width: 100%;
+  height: 100vh;
+  margin-top: 20px;
 }
-.about h1{
-       font-size: 35px;
-       text-align: center;
-       font-family: "Roboto", sans-serif;
-       letter-spacing: 0.5px;
+.about h1 {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
 }
 .about h2{
        font-size: 35px;
@@ -82,16 +82,38 @@ import Footer from '@/components/Footer'
        justify-content: space-around;
        margin-top: 30px;
 }
-.about .about_main .text{
-       width: 47%;
+
+@media (max-width: 911px) {
+.about .about_main .text p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
-.about .about_main .text p{
-       font-size: 18px;
-       font-family: "Roboto", sans-serif;
+}
+.about .about_main .text {
+  width: 47%;
+}
+.about .about_main .text p {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
 .about .about_main .img{
        width: 43%;
        height: 450px;
+}
+@media (max-width: 765px) {
+.about .about_main{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+} 
+.about .about_main .text {
+  width: 90%;
+  margin: 10px;
+}
+.about .about_main .img{
+       width: 90%;
+       height: 450px;
+}
 }
 .about .about_main .img img{
        width: 100%;
