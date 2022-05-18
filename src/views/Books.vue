@@ -1,14 +1,22 @@
 <template>
-  <div class="books">
-    <h2>{{ $t("Books") }}</h2>
-    <div class="items">
-      <div class="item" v-for="item in books" :key="item.id">
-        <router-link :to="`/singlebook/:${item.id}`" class="_btn"
-          >{{ $t("read_more") }}</router-link
-        >
-        <img :src="item.volumeInfo.imageLinks.thumbnail" alt="#" />
+  <div v-if="show">
+    <div class="books">
+      <h2>{{ $t("Books") }}</h2>
+      <div class="items">
+        <div class="item" v-for="item in books" :key="item.id">
+          <router-link :to="`/singlebook/:${item.id}`" class="_btn">{{
+            $t("read_more")
+          }}</router-link>
+          <img :src="item.volumeInfo.imageLinks.thumbnail" alt="#" />
+        </div>
       </div>
     </div>
+  </div>
+  <div
+    v-else
+    class="container d-flex align-items-center justify-content-center mt-5"
+  >
+    <LoadingIcon />
   </div>
 </template>
 
@@ -16,8 +24,15 @@
 import axios from "axios";
 import { ref } from "vue";
 import Navbar from "@/components/Navbar";
+import LoadingIcon from "./LoadingIcon.vue";
 const books = ref([]);
 const b = ref();
+const show = ref(false);
+
+setTimeout(() => {
+  show.value = true;
+  console.log(show.value);
+}, 500);
 
 const getBooks = () => {
   axios
