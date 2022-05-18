@@ -18,16 +18,33 @@
   "language": "Language",
   "description": "Description",
   "Library": "A library is a collection of materials, books or media that are easily accessible for use and not just for display purposes. It is responsible for housing updated information in order to meet the user's needs on a daily basis. A library provides physical (hard copies documents) or digital access (soft copies) materials, and may be a physical location or a virtual space, or both. A library's collection can include printed materials and other physical resources in many formats such as DVD, CD and Cassette as well as access to information, music or other content held on bibliographic databases.",
-
+  "student_enrollment": "Student Enrollment",
+  "undergraduate": "undergraduate",
+  "graduate": "profile graduate",
+  "situation": "As of Autumn Quarter, 2022",
+  "library_data": "Library Information",
+  "scientific_literature": "Scientific literature",
+  "name_": "name",
+  "copy": "copy",
+  "textbooks": "textbooks",
+  "tutorials": "tutorials",
+  "fiction": "fiction",
+  "faculty": "Faculty",
+  "professor": "professors and teachers",
+  "ratio": "student-teacher ratio",
+  "tatu_info": "TUIT was founded in 1955. Until 2002 it was called the Tashkent Institute of Electrical Communication",
+  "tatu_info_2003": "2003 - By the Decree of the President of the Republic of Uzbekistan TEAI was renamed Tashkent University of Information Technologies (TUIT)",
+  "tatu_info_2005": "2005 - Regional branches of TUIT were established in Karshi, Nukus, Samarkand, Urgench and Fergana",
+  "tatu_info_2017": "2017 - The University is named after Muhammad Al-Khwarizmi",
   "names": [
     {
-      "name1": "Central Asia - 2022 ”: XV International Conference“ Internet and Information and Library Resources in Science, Education, Culture and Business ”"
+      "name": "Central Asia - 2022 ”: XV International Conference“ Internet and Information and Library Resources in Science, Education, Culture and Business ”"
     },
     {
-      "name2": "Library of Foreign Literature"
+      "name": "Library of Foreign Literature"
     },
     {
-      "name3": "The most ordered books by users in the National Library of Uzbekistan in April 2022"
+      "name": "The most ordered books by users in the National Library of Uzbekistan in April 2022"
     }
   ]
 }

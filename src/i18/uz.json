@@ -18,7 +18,24 @@
   "language": "Til",
   "description": "Izoh",
   "Library": "Kutubxona — bosma va ayrim qoʻlyozma asarlardan ommaviy foydalanishni taʼminlovchi madaniy-maʼrifiy va ilmiy muassasa; muntazam ravishda bosma asarlar toʻplash, saqlash, targʻib qilish va kitobxonlarga yetkazish, shuningdek, axborot-bibliografiya ishlari bilan shugʻullanadi, ommaning madaniy saviyasini oshirishda faollik koʻrsatadi. Kitobxonlarga xizmat koʻrsatish K.ning asosiy faoliyati boʻlib, qolgan barcha faoliyatlar (kitob fondini butlash va uni tashkil etish, fond mazmunini yoritish, uni kitobxonlarga yetkazish qabilar) asosiy faoliyat uchun xizmat kiladi. Kitobxonlarga xizmat koʻrsatishning asosiy maqsadi ularni axborot va adabiyotga boʻlgan talablarini imkon boricha toʻliq qondirish va adabiyot tanlashlariga yordam berishdan iborat. Har bir K. oʻz turiga koʻra kitobxonlarni tabaqalarga boʻlib, alohida kitobxonlar guruhlariga ajratgan holda xizmat koʻrsatishni tashkil qiladi. Adabiyotlar targʻibotining barcha shakl va usullari kitobxonlar talabini imkon qadar toʻliq va tezkorlik bilan qondirishga qaratiladi.",
-
+  "student_enrollment": "Talabalarni ro'yxatga olish",
+  "undergraduate": "bakalavir",
+  "graduate": "profil sinfi",
+  "situation": "2022 yil kuz choragi holatiga ko'ra",
+  "library_data": "Kutubxona Ma'lumotlari",
+  "scientific_literature": "Ilmiy adabiyotlar",
+  "name_": "Nom",
+  "textbooks": "darsliklar",
+  "copy": "nusxa",
+  "fiction": "badiiy adabiyotlar",
+  "tutorials": "o‘quv qo‘llanmalar",
+  "faculty": "Fakultet",
+  "professor": "professor-o'qituvchilar",
+  "ratio": "talaba va o'qituvchilar nisbati",
+  "tatu_info": "TATU 1955-yilda tashkil etilgan. 2002-yilgacha Toshkent Elektrotexnika Aloqa Instituti deb nomlangan",
+  "tatu_info_2003": "2003 yil — Oʻzbekiston Respublikasi Prezidenti Farmoniga asosan TEAI Toshkent axborot texnologiyalari universiteti (TATU) deb atala boshlandi",
+  "tatu_info_2005": "2005 yil — Qarshi, Nukus, Samarqand, Urganch va Fargʻona shaharlarida TATU mintaqaviy filiallari tashkil etildi",
+  "tatu_info_2017": "2017 yil — Universitetga Muhammad Al-Xorazmiy nomi berildi",
   "item": [
     {
       "name": "Central Asia – 2022”: “Fan, ta’lim, madaniyat va biznesda internet va axborot-kutubxona resurslari” XV Xalqaro konferensiyasi ”"
