@@ -45,7 +45,8 @@
             to="/about_library"
             :class="click3 ? 'router1' : 'router'"
             @click="Click3"
-            >{{ $t("about_library") }}</router-link
+          >
+            {{ $t("about_library") }}</router-link
           >
         </li>
         <li>
@@ -57,14 +58,56 @@
           >
         </li>
         <li>
-          <router-link
-            to="/"
-            :class="click5 ? 'router1' : 'router'"
-            @click="Click5"
-            >{{ $t("libraries") }}</router-link
-          >
+          <a class="router" @click="OpenLibrary">{{ $t("libraries") }}</a>
         </li>
       </ul>
+          <div class="libraries" v-if="library">
+            <div class="library">
+                <a href="https://kitob.uz/">{{$t("book")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://library.harvard.edu/">{{$t("Harvard")}}</a>
+            </div>
+             <div class="library2">
+                <a href="https://tsuull.uz/en">{{$t("alisher")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://facts.stanford.edu/">{{$t("Stanford")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://academic.oup.com/library">{{$t("Oxword")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://www.lib.cam.ac.uk/">{{$t("Cambridge")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://www.natlib.uz/">{{$t("Uzb")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://www.natlib.uz/">{{$t("California")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://online.unt.edu/programs/graduate/library-science?gclid=Cj0KCQjwspKUBhCvARIsAB2IYut2XAeJoC3JNr6bMW92c_rlZDn5vVereuzCVzFuMfh-EkpXoIppbEwaApdaEALw_wcB">{{$t("Yale")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://library.columbia.edu/">{{$t("Columbia")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://www.csu.edu/">{{$t("Chicago")}}</a>
+            </div>
+            <div class="library2">
+                <a href="https://www.library.jhu.edu/">{{$t("John_Hopkins")}}</a>
+            </div>
+           
+             <div class="library2">
+                <a href="https://tuit.uz/elektron-kutubxona">{{$t("tatu")}}</a>
+            </div>
+             <div class="library2">
+                <a href="https://bilim.natlib.uz/">{{$t("knowladge")}}</a>
+            </div>
+          </div>
+          <div class="libraries1" v-else></div>
+
     </div>
   </div>
 </template>
@@ -73,7 +116,7 @@
 import i18n from "@/plugins/i18n";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
-import {onMounted} from 'vue'
+import { onMounted } from "vue";
 const { t, locale } = useI18n();
 console.log(i18n.global.locale, "locale");
 const click1 = ref(true);
@@ -81,10 +124,14 @@ const click2 = ref(false);
 const click3 = ref(false);
 const click4 = ref(false);
 const click5 = ref(false);
+const library = ref(true)
+const OpenLibrary =()=>{
+  library.value =!library.value
+}
 const d = ref();
 onMounted(() => {
-   i18n.global.locale = localStorage.getItem("lang")
-})
+  i18n.global.locale = localStorage.getItem("lang");
+});
 const change = (event) => {
   localStorage.setItem("lang", event.target.value);
   i18n.global.locale = event.target.value;
@@ -125,7 +172,6 @@ const Click5 = () => {
   click1.value = false;
 };
 </script>
-
 <style scoped>
 * {
   margin: 0;
@@ -205,6 +251,7 @@ const Click5 = () => {
 .navbars .nav_bottom {
   width: 100%;
   margin-top: 15px;
+  position: relative;
 }
 .navbars .nav_bottom ul {
   width: 100%;
@@ -234,5 +281,73 @@ const Click5 = () => {
 }
 .navbars .nav_bottom ul li .router:hover {
   color: #b1040e;
+}
+.navbars .nav_bottom .libraries{
+  position: absolute;
+  top: 45px;
+  right: 110px;
+  width: 300px;
+  height: 492px;
+  background-color: #fff;
+  z-index: 999;
+  border: 1px solid #817f7f;
+  border-radius: 7px;
+  
+}
+.navbars .nav_bottom .libraries .library{
+  width: 100%;
+  height: 35px;
+  border-radius: 7px 7px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #b1040e;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.navbars .nav_bottom .libraries .library2{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #b1040e;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.navbars .nav_bottom .libraries .library:hover{
+  background-color: #b1040e;
+}
+.navbars .nav_bottom .libraries .library2:hover{
+  background-color: #b1040e;
+}
+.navbars .nav_bottom .libraries .library:hover a{
+  color: #fff;
+}
+.navbars .nav_bottom .libraries .library2:hover a{
+  color: #fff;
+}
+.navbars .nav_bottom .libraries .library a{
+  text-decoration: none;
+  color: #b1040e;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.navbars .nav_bottom .libraries .library2 a{
+  text-decoration: none;
+  color: #b1040e;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.navbars .nav_bottom .libraries1{
+  display: none;
 }
 </style>
